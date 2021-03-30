@@ -28,7 +28,7 @@ pipeline {
         }
         post {
             always {
-                influxDbPublisher(target: 'http://influxdb-develop.demandbase.com:8086,TestDB', customData: null,
+                influxDbPublisher(selectedTarget: 'http://influxdb-develop.demandbase.com:8086,TestDB', customData: null,
             customDataMap: null,
             customPrefix: null)
             }
