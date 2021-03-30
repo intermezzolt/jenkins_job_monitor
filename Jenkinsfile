@@ -38,4 +38,3 @@ def assignURL(build_url) {
     buildURL['url'] = build_url
     return buildURL
 }
-© 2021 GitHub, Inc.
