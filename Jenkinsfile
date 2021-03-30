@@ -31,7 +31,6 @@ pipeline {
                 influxDbPublisher(selectedTarget: 'TestDB', customData: assignURL(BUILD_URL))
             }
         }
-        }
     }
 
 def assignURL(build_url) {
@@ -39,3 +38,4 @@ def assignURL(build_url) {
     buildURL['url'] = build_url
     return buildURL
 }
+© 2021 GitHub, Inc.
