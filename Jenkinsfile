@@ -26,11 +26,14 @@ pipeline {
             }
         }
         }
-        step([$class: 'InfluxDbPublisher',
-            customData: null,
+        post {
+            always {
+                influxDbPublisher(selectedTarget: 'TestDB', customData: null,
             customDataMap: null,
             customPrefix: null,
-            target: 'local influxDB'])
+            target: 'http://influx:8086'])
+            }
+        }
     }
 
 def assignURL(build_url) {
