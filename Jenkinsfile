@@ -30,8 +30,7 @@ pipeline {
             always {
                 influxDbPublisher(selectedTarget: 'TestDB', customData: null,
             customDataMap: null,
-            customPrefix: null,
-            target: 'http://influx:8086')
+            customPrefix: null)
             }
         }
     }
