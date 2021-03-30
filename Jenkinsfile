@@ -28,10 +28,9 @@ pipeline {
         }
         post {
             always {
-                influxDbPublisher(selectedTarget: 'http://influxdb-develop.demandbase.com:8086,TestDB', customData: null,
-            customDataMap: null,
-            customPrefix: null)
+                influxDbPublisher(selectedTarget: 'TestDB', customData: assignURL(BUILD_URL))
             }
+        }
         }
     }
 
